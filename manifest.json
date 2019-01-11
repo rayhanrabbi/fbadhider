@@ -1,0 +1,23 @@
+{
+  "name": "FB Sponsored Blocker",
+  "description": "Hide the sponsored ads from Facebook newsfeed",
+  "version": "2.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+	  "css" : ["style.css"],
+      "js": ["jquery.js","code.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Hide the sponsored ads from Facebook newsfeed"
+  },
+  "manifest_version": 2
+}
